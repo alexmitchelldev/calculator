@@ -10,14 +10,14 @@ h1 {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 35px 25px 25px 25px 25px;
-    gap: 10px 0px;
+    grid-template-rows: 30px 25px 25px 25px 25px;
     grid-auto-flow: row;
     /* border: 1px solid black; */
     
     width: 40%;
     margin: 0 auto;
     background-color: rgb(70, 70, 70);
+    border: 5px solid black;
   }
   
   #calculationPane { 
@@ -31,9 +31,18 @@ h1 {
   
   .one { 
     grid-area: 2 / 1 / 3 / 2; 
-    /* border: 1px solid black; */
   }
-  
+
+  .number:hover {
+    background-color: rgb(255, 210, 127); 
+    color: black;
+  }
+
+  .operations:hover {
+    background-color: rgb(193, 127, 255);
+  }
+
+ 
   .two { grid-area: 2 / 2 / 3 / 3; }
   
   .three { grid-area: 2 / 3 / 3 / 4; }
@@ -55,8 +64,17 @@ h1 {
   .decimalPoint { 
     grid-area: 5 / 1 / 6 / 2; 
   }
+
+  .decimalPoint:hover {
+    background-color: rgb(127, 255, 217);
+  }
   
   .equals { grid-area: 5 / 3 / 6 / 4; }
+
+  .equals:hover {
+    background-color: rgb(127, 255, 217);
+  }
+  
 
   #CE { 
     grid-area: 1 / 4 / 2 / 5;
@@ -64,6 +82,11 @@ h1 {
     align-items: center;
     justify-content: center; 
   }
+
+  #CE:hover {
+    background-color: rgb(127, 255, 217);
+  }
+  
 
   #divide { grid-area: 5 / 4 / 6 / 5; }
   
