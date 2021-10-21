@@ -1,29 +1,27 @@
-const   calculationPane   = document.getElementById('calculationPane'),
-        numbers           = document.getElementsByClassName('number'),
-        operations        = document.getElementsByClassName('operations'),
-        equals            = document.getElementById('equals'),
-        CE                = document.getElementById('CE'),
-        decimalPoint      = document.getElementById('decimalPoint');
+const   calculationPane = document.getElementById('calculationPane'),
+        numbers         = document.getElementsByClassName('number'),
+        operations      = document.getElementsByClassName('operations'),
+        equals          = document.getElementById('equals'),
+        CE              = document.getElementById('CE'),
+        decimalPoint    = document.getElementById('decimalPoint'),
+        calculate       = (operationType, number1, number2) => {
+            switch (operationType) {
+                case 'divide':
+                    return number1 / number2;
+                case 'multiply':
+                    return number1 * number2;
+                case 'subtract':
+                    return number1 - number2;
+                case 'add':
+                    return number1 + number2;
+            }
+        };    
 
 let number1, 
     number2,
     operationType,
     calculationComplete = false,
-    total = 0,
     decimalCount = 0;
-
-const calculate         = (operationType, number1, number2) => {
-    switch (operationType) {
-        case 'divide':
-            return number1 / number2;
-        case 'multiply':
-            return number1 * number2;
-        case 'subtract':
-            return number1 - number2;
-        case 'add':
-            return number1 + number2;
-    }
-};
 
 for (const number of numbers) {
     number.addEventListener('click', function() {
@@ -33,7 +31,7 @@ for (const number of numbers) {
         }
         calculationPane.innerHTML += number.innerHTML.toString();
     })
-}
+};
 
 for (const operation of operations) {
     operation.addEventListener('click', function() {
