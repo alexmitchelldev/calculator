@@ -1,0 +1,45 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    border: 1px black;
+  }
+  
+  .result { grid-area: 1 / 1 / 2 / 4; }
+  
+  .operations { grid-area: 1 / 4 / 5 / 5; }
+  
+  .one { grid-area: 2 / 1 / 3 / 2; }
+  
+  .two { grid-area: 2 / 2 / 3 / 3; }
+  
+  .three { grid-area: 2 / 3 / 3 / 4; }
+  
+  .four { grid-area: 3 / 1 / 4 / 2; }
+  
+  .five { grid-area: 3 / 2 / 4 / 3; }
+  
+  .six { grid-area: 3 / 3 / 4 / 4; }
+  
+  .seven { grid-area: 4 / 1 / 5 / 2; }
+  
+  .eight { grid-area: 4 / 2 / 5 / 3; }
+  
+  .nine { grid-area: 4 / 3 / 5 / 4; }
+  
+  .zero { grid-area: 5 / 2 / 6 / 3; }
+  
+  .decimalPoint { grid-area: 5 / 1 / 6 / 2; }
+  
+  .equals { grid-area: 5 / 3 / 6 / 5; }
+  
+  .divide { grid-area: 1 / 4 / 2 / 5; }
+  
+  .multiply { grid-area: 2 / 4 / 3 / 5; }
+  
+  .subtract { grid-area: 3 / 4 / 4 / 5; }
+  
+  .add { grid-area: 4 / 4 / 5 / 5; }
+  
