@@ -38,7 +38,7 @@ for (const operation of operations) {
         operationType = operation.id;
         number1 = Number(calculationPane.innerHTML);
         decimalCount = 0;
-        document.getElementById('calculationPane').innerHTML = '';
+        calculationPane.innerHTML = '';
     });
 };
 
