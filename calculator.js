@@ -1,9 +1,10 @@
-const calculationPane   = document.getElementById('calculationPane');
-const numbers           = document.getElementsByClassName('number');
-const operations        = document.getElementsByClassName('operations');
-const equals            = document.getElementById('equals');
-const CE                = document.getElementById('CE');
-const decimalPoint      = document.getElementById('decimalPoint');
+const   calculationPane   = document.getElementById('calculationPane'),
+        numbers           = document.getElementsByClassName('number'),
+        operations        = document.getElementsByClassName('operations'),
+        equals            = document.getElementById('equals'),
+        CE                = document.getElementById('CE'),
+        decimalPoint      = document.getElementById('decimalPoint');
+
 let number1, 
     number2,
     operationType,
