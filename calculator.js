@@ -4,7 +4,12 @@ const operations        = document.getElementsByClassName('operations');
 const equals            = document.getElementById('equals');
 const CE                = document.getElementById('CE');
 const decimalPoint      = document.getElementById('decimalPoint');
-let number1, number2, operationType, calculationComplete = false, total = 0, decimalCount = 0;
+let number1, 
+    number2,
+    operationType,
+    calculationComplete = false,
+    total = 0,
+    decimalCount = 0;
 
 const calculate         = (operationType, number1, number2) => {
     switch (operationType) {
