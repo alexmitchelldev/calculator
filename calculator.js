@@ -20,14 +20,14 @@ const   calculationPane = document.getElementById('calculationPane'),
 let number1, 
     number2,
     operationType,
-    calculationComplete = false,
+    previousCalcuation = false,
     decimalCount = 0;
 
 for (const number of numbers) {
     number.addEventListener('click', function() {
-        if (calculationComplete) {
+        if (previousCalcuation) {
             calculationPane.innerHTML = '';
-            calculationComplete = false;
+            previousCalcuation = false;
         }
         calculationPane.innerHTML += number.innerHTML.toString();
     })
@@ -54,7 +54,7 @@ decimalPoint.addEventListener('click', function() {
 equals.addEventListener('click', function() {
     number2 = Number(calculationPane.innerHTML);
     calculationPane.innerHTML = calculate(operationType, number1, number2).toString();
-    calculationComplete = true;
+    previousCalcuation = true;
     decimalCount = 0;
 });
 
